@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cache PUBLIC "-//GemStone Systems, Inc.//GemFire Declarative Caching 7.0//EN" "http://www.gemstone.com/dtd/cache7_0.dtd">
+<cache copy-on-read="true">
+   <!-- regions -->
+<region name="trades">
+<region-attributes refid="PARTITION" concurrency-checks-enabled="true">
+<partition-attributes total-num-buckets="113" recovery-delay="5000" startup-recovery-delay="5000" redundant-copies="1">
+ <partition-resolver name="customPartitionResolver">
+              <class-name>com.support.pivotal.function.domain.CustomPartitionResolver</class-name>
+           </partition-resolver>
+</partition-attributes>
+</region-attributes> 
+</region>   
+<region name="trades_history">
+      <region-attributes refid="PARTITION" concurrency-checks-enabled="true">
+        <partition-attributes total-num-buckets="113" recovery-delay="5000" startup-recovery-delay="5000" redundant-copies="1" colocated-with="trades">
+        <partition-resolver name="customPartitionResolver">
+              <class-name>com.support.pivotal.function.domain.CustomPartitionResolver</class-name>
+           </partition-resolver>
+        </partition-attributes>
+      </region-attributes>
+   </region>
+<function-service>
+  <function>
+    <class-name>com.support.pivotal.function.function.ColocatedQueryFunction</class-name>
+  </function>
+</function-service>
+</cache>
