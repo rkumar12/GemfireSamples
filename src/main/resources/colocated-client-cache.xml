@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE client-cache PUBLIC
+  "-//GemStone Systems, Inc.//GemFire Declarative Caching 6.5//EN"
+  "http://www.gemstone.com/dtd/cache7_0.dtd">
+
+<client-cache>
+	<pool name="client" subscription-enabled="true" pr-single-hop-enabled="false">
+		<locator host="localhost" port="10334" />
+	</pool>
+	<region name="trades" refid="CACHING_PROXY" />
+	<region name="trades_history" refid="CACHING_PROXY" />
+	<serialization-registration>
+	</serialization-registration>
+	
+</client-cache>
