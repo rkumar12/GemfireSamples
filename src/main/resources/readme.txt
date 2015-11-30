@@ -1,0 +1,4 @@
+gfsh>start locator --name=locator --bind-address=localhost --port=10334 --log-level=fine
+gfsh>start server --name=server1 --cache-xml-file=/Users/rajiv/kumar/gemfire/william/server1.xml --properties-file=/Users/rajiv/kumar/gemfire/william/gemfire1.properties --classpath=/Users/rajiv/kumar/sourcecode/GemfireSamples/target/function.jar --server-port=40404 --locators=localhost[10334]
+gfsh>start server --name=server2 --cache-xml-file=/Users/rajiv/kumar/gemfire/william/server2.xml --properties-file=/Users/rajiv/kumar/gemfire/william/gemfire2.properties --classpath=/Users/rajiv/kumar/sourcecode/GemfireSamples/target/function.jar --server-port=40405 --locators=localhost[10334]
+gfsh>start server --name=server3 --cache-xml-file=/Users/rajiv/kumar/gemfire/william/server3.xml --properties-file=/Users/rajiv/kumar/gemfire/william/gemfire3.properties --classpath=/Users/rajiv/kumar/sourcecode/GemfireSamples/target/function.jar --server-port=40406 --locators=localhost[10334]

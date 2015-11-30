@@ -24,5 +24,8 @@
   <function>
     <class-name>com.support.pivotal.function.function.ColocatedQueryFunction</class-name>
   </function>
+  <function>
+    <class-name>com.support.pivotal.function.function.MultiGetFunction</class-name>
+  </function>
 </function-service>
 </cache>
